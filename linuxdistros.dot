@@ -1,0 +1,456 @@
+digraph linuxdistros {
+// Graphviz dot Map of Linux Distributions
+
+// NOTE: Very unstable graph, re-ordering any nodes will dramatically change the whole diagram.
+
+// 2026-May-05 code@codywohlers.ca - initial creation.
+
+
+label=<<table border="0" cellborder="0" cellpadding="0" cellspacing="0">
+<tr><td colspan="2"><font point-size="36">Some Popular, Common, and Important Linux Distributions 2026</font></td></tr>
+<tr><td colspan="2">The categories are common uses, but for the most part any distro is capable of being anything.  Logos are copyright and/or trademarks of their holders.  Made with Graphviz.</td></tr>
+<tr><td align="right">2026-Mar-05 &nbsp;</td>
+<td align="left" href="https://github.com/codywohlers/linuxdistromap" tooltip="https://github.com/codywohlers/linuxdistromap"><font color="blue">github.com/codywohlers/linuxdistromap</font></td>
+</tr></table>>
+
+labelloc=t
+labeljust=c
+
+
+// Dark Mode (experimental)
+//bgcolor=black
+//color=white
+//fontcolor=white
+//fontcolor=green
+//edge [color=green] //constraint=false]
+
+
+// Layout
+
+rankdir=LR
+ranksep=4
+
+//ranksep=3
+
+//layout=neato
+//scale=3
+
+//splines=polyline
+
+
+fontname="Liberation Sans"
+node [shape=box style=filled fillcolor=white fontname="Liberation Sans" color=white]
+edge [color="#505050"]
+
+subgraph cluster_GNULinux {
+label=""
+color=none
+Linux 			[image="logos/linux.png"		label="" href="https://en.wikipedia.org/wiki/Linux"]
+GNU 			[image="logos/gnu.png"			label="" href="https://en.wikipedia.org/wiki/GNU"]
+//GNULinux		[shape=point style=invis]		// COSMETIC for Arch href=""
+}
+
+subgraph cluster_Specific {
+label="Specific"
+//color=none
+NixOS 			[image="logos/nixos.png"		label="" href="https://distrowatch.com/table.php?distribution=nixos"]
+FromScrath 		[image="logos/lfs.png"			label="" href="https://distrowatch.com/table.php?distribution=lfs"]
+Gentoo 			[image="logos/gentoo.png"		label="" href="https://distrowatch.com/table.php?distribution=gentoo"]
+Slackware 		[image="logos/slackware.png"	label="" href="https://distrowatch.com/table.php?distribution=slackware"]
+Void 			[image="logos/void.png"			label="" href="https://distrowatch.com/table.php?distribution=void"]
+CentOS 			[image="logos/centos.png"		label="" href="https://distrowatch.com/table.php?distribution=centos"]
+subgraph cluster_Specific_Historic {
+label="Historic"
+style=dashed
+Clear			[image="logos/clear.png"		label="" href="https://distrowatch.com/table.php?distribution=clear"]
+}
+}
+
+subgraph cluster_Historic {
+label="Historic"
+style=dashed
+SUSE 			[image="logos/suse.png"			label="" href="https://en.wikipedia.org/wiki/SUSE_S.A."]
+RedHat 			[image="logos/redhat.png"		label="" href="https://en.wikipedia.org/wiki/Red_Hat_Linux"]
+}
+
+subgraph cluster_Server {
+label="Server"
+GoogleCOOS		[image="logos/googlecoos.png"	label="" href="https://docs.cloud.google.com/container-optimized-os"]
+Proxmox			[image="logos/proxmox.png"		label="" href="https://distrowatch.com/table.php?distribution=proxmox"]
+AzureMariner	[image="logos/cblmariner.png"	label="" href="https://en.wikipedia.org/wiki/Azure_Linux"]
+Debian 			[image="logos/debian.png"		label="" href="https://distrowatch.com/table.php?distribution=debian"]
+Amazon			[image="logos/amazon.png"		label="" href="https://en.wikipedia.org/wiki/Amazon_Machine_Image#Amazon_Linux_AMI"]
+Devuan 			[image="logos/devuan.png"		label="" href="https://distrowatch.com/table.php?distribution=devuan"]
+Rocky			[image="logos/rocky.png"		label="" href="https://distrowatch.com/table.php?distribution=rocky"]
+Alma			[image="logos/alma.png"			label="" href="https://distrowatch.com/table.php?distribution=alma"]
+SLE 			[image="logos/sle.png"			label="" href="https://distrowatch.com/table.php?distribution=sle"]
+RHEL 			[image="logos/rhel.png"			label="" href="https://distrowatch.com/table.php?distribution=redhat"]
+}
+
+subgraph cluster_Desktop {
+label="Desktop"
+labeljust=c
+MX 				[image="logos/mx.png"			label="" href="https://distrowatch.com/table.php?distribution=mx"]
+Arch 			[image="logos/arch.png"			label="" href="https://distrowatch.com/table.php?distribution=arch"]
+OpenMandriva	[image="logos/openmandriva.png"	label="" href="https://distrowatch.com/table.php?distribution=openmandriva"]
+Omarchy 		[image="logos/omarchy.png"		label="" href="https://distrowatch.com/table.php?distribution=omarchy"]
+OpenSUSE 		[image="logos/opensuse.png"		label="" href="https://distrowatch.com/table.php?distribution=opensuse"]
+Fedora 			[image="logos/fedora.png"		label="" href="https://distrowatch.com/table.php?distribution=fedora"]
+Manjaro 		[image="logos/manjaro.png"		label="" href="https://distrowatch.com/table.php?distribution=manjaro"]
+EndeavourOS		[image="logos/endeavour.png"	label="" href="https://distrowatch.com/table.php?distribution=endeavour"]
+PopOS 			[image="logos/popos.png"		label="" href="https://distrowatch.com/table.php?distribution=popos"]
+DSL 			[image="logos/damnsmall.png"	label="" href="https://distrowatch.com/table.php?distribution=damnsmall"]
+ChromeOSFlex 	[image="logos/chromeosflex.png"	label="" href="https://distrowatch.com/table.php?distribution=chromeos"]
+FydeOS		 	[image="logos/fydeos.png"		label="" href="https://distrowatch.com/table.php?distribution=fydeos"]
+Q4OS	 		[image="logos/q4os.png"			label="" href="https://distrowatch.com/table.php?distribution=q4os"]
+Winux			[image="logos/winux.png"		label="" href="https://en.wikipedia.org/wiki/Winux"]
+Knoppix 		[image="logos/knoppix.png"		label="" href="https://distrowatch.com/table.php?distribution=knoppix"]
+AntiX 			[image="logos/antix.png"		label="" href="https://distrowatch.com/table.php?distribution=antix"]
+Bluestar		[image="logos/bluestar.png"		label="" href="https://distrowatch.com/table.php?distribution=bluestar"]
+KDE 			[image="logos/kdelinux.png"		label="" href="https://distrowatch.com/table.php?distribution=kdelinux"]
+Anduin	 		[image="logos/anduin.png"		label="" href="https://distrowatch.com/table.php?distribution=anduin"]
+KDENeon 		[image="logos/kdeneon.png"		label="" href="https://distrowatch.com/table.php?distribution=neon"]
+Vanilla	 		[image="logos/vanilla.png"		label="" href="https://distrowatch.com/table.php?distribution=vanilla"]
+MiniOS 			[image="logos/minios.png"		label="" href="https://distrowatch.com/table.php?distribution=minios"]
+Big		 		[image="logos/biglinux.png"		label="" href="https://distrowatch.com/table.php?distribution=biglinux"]
+Artix	 		[image="logos/artix.png"		label="" href="https://distrowatch.com/table.php?distribution=artix"]
+Mageia 			[image="logos/mageia.png"		label="" href="https://distrowatch.com/table.php?distribution=mageia"]
+Rosa 			[image="logos/rosa.png"			label="" href="https://distrowatch.com/table.php?distribution=rosa"]
+
+subgraph cluster_DesktopHistoric2 {
+label="Historic"
+labeljust=l
+style=dashed
+Linuxfx			[image="logos/linuxfx.png"		label="" href="https://distrowatch.com/table.php?distribution=linuxfx"]
+Wubuntu			[image="logos/wubuntu.png"		label="" href="https://en.wikipedia.org/wiki/Wubuntu"]
+Lindows			[image="logos/lindows.png"		label="" href="https://en.wikipedia.org/wiki/Lindows"]
+Linspire		[image="logos/linspire.png"		label="" href="https://distrowatch.com/table.php?distribution=linspire"]
+}
+
+subgraph cluster_DesktopUbuntu {
+style=invis
+Xubuntu			[image="logos/xubuntu.png"		label="" href="https://distrowatch.com/table.php?distribution=xubuntu"]
+Lubuntu			[image="logos/lubuntu.png"		label="" href="https://distrowatch.com/table.php?distribution=lubuntu"]
+Kubuntu 		[image="logos/kubuntu.png"		label="" href="https://distrowatch.com/table.php?distribution=kubuntu"]
+}
+
+subgraph cluster_BeginnerDesktop {
+//label="Beginner (as per DistroWatch)"
+label=<<table border="0" cellborder="0" cellpadding="0" cellspacing="0" ><tr><td>Beginner </td><td href="https://distrowatch.com/search.php?category=Beginners" tooltip="https://distrowatch.com/search.php?category=Beginners"> (as per DistroWatch)</td></tr></table>>
+labeljust=l
+style=dashed
+PCLinuxOS 		[image="logos/pclinuxos.png"	label="" href="https://distrowatch.com/table.php?distribution=pclinuxos"]
+Solus	 		[image="logos/solus.png"		label="" href="https://distrowatch.com/table.php?distribution=solus"]
+Ubuntu 			[image="logos/ubuntu.png"		label="" href="https://distrowatch.com/table.php?distribution=ubuntu"]
+Mint 			[image="logos/mint.png"			label="" href="https://distrowatch.com/table.php?distribution=mint"]
+Zorin	 		[image="logos/zorin.png"		label="" href="https://distrowatch.com/table.php?distribution=zorin"]
+TuxedoOS 		[image="logos/tuxedo.png"		label="" href="https://distrowatch.com/table.php?distribution=tuxedo"]
+Elementary 		[image="logos/elementary.png"	label="" href="https://distrowatch.com/table.php?distribution=elementary"]
+}
+
+subgraph cluster_DesktopGNU {
+style=invis
+Aeryn	 		[image="logos/aerynos.png"		label="" href="https://distrowatch.com/table.php?distribution=aerynos"]
+Puppy 			[image="logos/puppy.png"		label="" href="https://distrowatch.com/table.php?distribution=puppy"]
+Peppermint		[image="logos/peppermint.png"	label="" href="https://distrowatch.com/table.php?distribution=peppermint"]
+}
+
+subgraph cluster_DesktopWindows {
+label="Windows"
+labeljust=c
+//style=dashed
+WSL 			[image="logos/wsl.png"			label="" href="https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux"]
+}
+
+subgraph cluster_DesktopHistoric {
+label="Historic"
+labeljust=c
+style=dashed
+Mandriva 		[image="logos/mandriva.png"		label="" href="https://distrowatch.com/table.php?distribution=mandriva"]
+Mandrake 		[image="logos/mandrake.png"		label="" href="https://en.wikipedia.org/wiki/Mandrake_Linux"]
+Slax			[image="logos/slax.png"			label="" href="https://distrowatch.com/table.php?distribution=slax"]
+}
+
+subgraph cluster_GamingDesktop {
+label="Desktop\nGaming"
+labeljust=c
+style=dashed
+CachyOS 		[image="logos/cachyos.png"		label="" href="https://distrowatch.com/table.php?distribution=cachyos"]
+Nobara 			[image="logos/nobara.png"		label="" href="https://distrowatch.com/table.php?distribution=nobara"]
+Garuda	 		[image="logos/garuda.png"		label="" href="https://distrowatch.com/table.php?distribution=garuda"]
+PikaOS			[image="logos/pikaos.png"		label="" href="https://distrowatch.com/table.php?distribution=pikaos"]
+}
+
+subgraph cluster_GamingConsole {
+label="Gaming\nConsole"
+labeljust=c
+style=dashed
+Bazzite 		[image="logos/bazzite.png"		label="" href="https://distrowatch.com/table.php?distribution=bazzite"]
+SteamOS 		[image="logos/steamos.png"		label="" href="https://distrowatch.com/table.php?distribution=steamos"]
+}
+
+subgraph cluster_AppleM {
+label="Apple M"
+labeljust=c
+//style=dashed
+Asahi 			[image="logos/asahi.png"		label="" href="https://distrowatch.com/table.php?distribution=asahi"]
+}
+
+subgraph cluster_Security {
+label="Security"
+labeljust=c
+style=dashed
+Parrot			[image="logos/parrot.png"		label="" href="https://distrowatch.com/table.php?distribution=parrot"]
+Kali 			[image="logos/kali.png"			label="" href="https://distrowatch.com/table.php?distribution=kali"]
+Tails			[image="logos/tails.png"		label="" href="https://distrowatch.com/table.php?distribution=tails"]
+Qubes			[image="logos/qubes.png"		label="" href="https://distrowatch.com/table.php?distribution=qubes"]
+}
+
+subgraph cluster_ChromeBook {
+label="ChromeBook"
+labeljust=c
+//style=dashed
+ChromeOS 		[image="logos/chromeos.png"		label="" href="https://en.wikipedia.org/wiki/ChromeOS"]
+ChromiumOS 		[image="logos/chromiumos.png"	label="" href="https://en.wikipedia.org/wiki/ChromiumOS"]
+}
+}
+
+subgraph cluster_Mobile {
+label="                                           Mobile"
+labeljust=l
+AndroidX86 		[image="logos/androidx86.png"	label="" href="https://distrowatch.com/table.php?distribution=androidx86"]
+GrapheneOS 		[image="logos/grapheneos.png"	label="" href="https://distrowatch.com/table.php?distribution=grapheneos"]
+OmniROM 		[image="logos/omnirom.png"		label="" href="https://en.wikipedia.org/wiki/OmniROM"]
+LineageOS 		[image="logos/lineageos.png"	label="" href="https://en.wikipedia.org/wiki/LineageOS"]
+PostmarketOS 	[image="logos/postmarketos.png"	label="" href="https://distrowatch.com/table.php?distribution=postmarketos"]
+UbuntuTouch 	[image="logos/ubuntutouch.png"	label="" href="https://en.wikipedia.org/wiki/Ubuntu_Touch"]
+subgraph cluster_HistoricMobile {
+label="Historic"
+style=dashed
+labeljust=c
+CyanogenMod 	[image="logos/cyanogenmod.png"	label="" href="https://en.wikipedia.org/wiki/CyanogenMod"]
+UbuntuAndroid 	[image="logos/ubuntuandroid.png"label="" href="https://en.wikipedia.org/wiki/Ubuntu_Touch#Ubuntu_for_Android"]
+}
+Droidian 		[image="logos/droidian.png"		label="" href="https://en.wikipedia.org/wiki/Droidian"]
+Mobian			[image="logos/mobian.png"		label="" href="https://distrowatch.com/table.php?distribution=mobian"]
+UBports			[image="logos/ubports.png"		label="" href="https://distrowatch.com/table.php?distribution=ubports"]
+Android 		[image="logos/android.png"		label="" href="https://en.wikipedia.org/wiki/Android_(operating_system)"]
+}
+
+
+subgraph cluster_Embedded {
+label="Embedded"
+OpenWRT			[image="logos/openwrt.png"		label="" href="https://en.wikipedia.org/wiki/OpenWrt"]
+Alpine 			[image="logos/alpine.png"		label="" href="https://distrowatch.com/table.php?distribution=alpine"]
+Sonic 			[image="logos/sonic.png"		label="" href="https://en.wikipedia.org/wiki/SONiC_(operating_system)"]
+Apertis			[image="logos/apertis.png"		label="" href="https://distrowatch.com/table.php?distribution=apertis"]
+AzureSphere		[image="logos/azuresphere.png"	label="" href="https://en.wikipedia.org/wiki/Azure_Sphere"]
+RaspberryPi		[image="logos/raspios.png"		label="" href="https://distrowatch.com/table.php?distribution=raspios"]
+RTLinux			[image="logos/rtlinux.png"		label="" href="https://realtime-linux.org/"]
+TinyCore 		[image="logos/tinycore.png"		label="" href="https://distrowatch.com/table.php?distribution=tinycore"]
+}
+
+
+// GUN/Linux
+Linux -> GNU [constraint=false]
+
+// Specific
+GNU -> Gentoo
+GNU -> NixOS
+GNU -> Void
+GNU -> Slackware
+GNU -> FromScrath
+GNU -> Clear
+GNU -> RedHat
+GNU -> SUSE
+Slackware -> SUSE [constraint=false style="dashed"]
+Fedora -> CentOS //[constraint=false]
+
+// Server
+GNU -> Debian //[constraint=false]
+OpenSUSE -> SLE
+GNU -> AzureMariner //[constraint=false]
+CentOS -> RHEL [color=black] //[penwidth=2.0] // weight=2]// constraint=false]
+Debian -> Proxmox [constraint=false]
+Debian -> Devuan [constraint=false]
+RHEL -> Alma [constraint=false] //penwidth=2.0]
+RHEL -> Rocky [constraint=false] //penwidth=2.0]
+RHEL -> Amazon [constraint=false] //penwidth=2.0]
+ChromiumOS -> GoogleCOOS
+
+// Desktop
+GNU -> Aeryn
+GNU -> Arch //[constraint=false]
+//GNU -> GNULinux [dir=none]
+//GNULinux -> Arch
+GNU -> PCLinuxOS
+GNU -> Puppy
+GNU -> Solus
+AntiX -> DSL
+AntiX -> MX //[style=dashed]
+Arch -> EndeavourOS
+Arch -> KDE
+Arch -> Manjaro
+Arch -> Artix
+Manjaro -> Artix [constraint=false style="dashed"]
+Arch -> Garuda
+Arch -> Bluestar
+Arch -> Omarchy
+Manjaro -> Garuda [constraint=false style="dashed"]
+Manjaro -> Big [constraint=false]
+Debian -> AntiX
+Debian -> Knoppix
+Debian -> MiniOS
+Debian -> Q4OS
+Debian -> Vanilla
+Devuan -> Peppermint
+Fedora -> Asahi //[constraint=false]
+KDENeon -> KDE [style="dashed"]
+Knoppix -> DSL [style="dashed"] 
+RedHat -> Fedora //[penwidth=2.0] //constraint=false]
+RedHat -> Mandrake
+Mandrake -> Mandriva [constraint=false]
+Mandriva -> Mageia //[constraint=false]
+Mandriva -> Rosa [constraint=false]
+Rosa -> OpenMandriva //[constraint=false]
+Slackware -> Slax
+SUSE -> OpenSUSE
+Ubuntu -> Anduin
+Ubuntu -> KDENeon //[constraint=false]
+Ubuntu -> Kubuntu //[constraint=false]
+Ubuntu -> Lubuntu //[constraint=false]
+Ubuntu -> Xubuntu //[constraint=false]
+Ubuntu -> Linuxfx
+Linuxfx -> Wubuntu //[constraint=false]
+Wubuntu -> Winux [constraint=false]
+Ubuntu -> Lindows
+Lindows -> Linspire //[constraint=false]
+Ubuntu -> PopOS //[constraint=false]
+Ubuntu -> WSL [style="dashed"] 
+
+// Beginner Desktop
+Debian -> Ubuntu
+Ubuntu -> Mint //[constraint=false]
+Ubuntu -> Elementary
+Ubuntu -> TuxedoOS
+Ubuntu -> Zorin
+
+// Desktop Gaming
+Arch -> CachyOS
+Clear -> CachyOS [style="dashed"]
+Fedora -> Nobara
+Debian -> PikaOS //[constraint=false]
+
+// Console Gaming
+Fedora -> Bazzite //[constraint=false]
+Arch -> SteamOS //[constraint=false]
+//Debian -> SteamOS [style=dashed constraint=false]
+
+// Security
+Debian -> Kali //[constraint=false]
+Debian -> Parrot //[constraint=false]
+Debian -> Tails //[constraint=false]
+Debian -> Qubes [style="dashed"]
+Fedora -> Qubes [constraint=false]
+
+// Chromebook
+Gentoo -> ChromiumOS 		//[constraint=false]
+ChromiumOS -> ChromeOS 		[constraint=false]
+Debian -> ChromiumOS 	[style="dashed"] //[constraint=false]
+ChromeOS -> ChromeOSFlex 	//[constraint=false]
+ChromiumOS -> FydeOS 	//[constraint=false]
+
+//Mobile
+Linux -> Android //[constraint=false]
+Mobian -> Droidian
+Android -> Droidian
+Android -> GrapheneOS
+Android -> AndroidX86
+Android -> OmniROM
+Android -> CyanogenMod //[constraint=false]
+Android -> PostmarketOS [style=dashed constraint=false]
+CyanogenMod -> LineageOS
+Alpine -> PostmarketOS
+Ubuntu -> UbuntuTouch //[constraint=false]
+Ubuntu -> UbuntuAndroid //[constraint=false]
+Android -> UbuntuAndroid //[constraint=false]
+Debian -> Mobian
+UbuntuTouch -> UBports [dir=both]
+
+// Embedded
+Debian -> RaspberryPi 	[constraint=false color=black] //penwidth=2.0] //color=darkgrey]
+Debian -> Apertis		[constraint=false color=black] //penwidth=2.0]
+Linux -> Alpine 		//[constraint=false]
+Linux -> AzureSphere 	//[constraint=false]
+Linux -> TinyCore 		//[constraint=false]
+Linux -> RTLinux 		//[constraint=false]
+Linux -> OpenWRT	 	//[constraint=false]
+Linux -> Sonic	 		//[constraint=false]
+
+
+
+// ======== COSMETIC =============
+
+//Linux -> GNULinux [style=invis]
+
+Arch -> Big [style=invis]
+
+RedHat -> Rosa [style=invis]
+Linuxfx -> Winux [style=invis] 
+
+Droidian -> GrapheneOS [style=invis]
+Mobian -> UbuntuTouch [style=invis]
+
+
+Linux -> Qubes [style=invis]
+
+//Linux -> AntiX [style=invis]
+//Linux -> Ubuntu [style=invis]
+//Linux -> Mobian [style=invis]
+//Rocky -> Ubuntu [style=invis]
+
+MiniOS -> WSL [style=invis]
+Qubes -> KDENeon [style=invis]
+
+Qubes -> Anduin [style=invis]
+Qubes -> PopOS [style=invis]
+Qubes -> ChromeOSFlex [style=invis]
+Qubes -> FydeOS [style=invis]
+
+Qubes -> KDE [style=invis]
+
+Qubes -> Kubuntu [style=invis]
+Qubes -> Lubuntu [style=invis]
+Qubes -> Xubuntu [style=invis]
+//Qubes -> Winux [style=invis]
+Qubes -> Linuxfx [style=invis]
+Qubes -> Lindows [style=invis]
+
+//Clear -> KDE [style=invis]
+
+// Ubuntu -> Arch [style=invis]
+
+//Elementary -> Kubuntu [style=invis]
+//TuxedoOS -> WSL [style=invis]
+
+//PopOS -> Q4OS [style=invis]
+//PopOS -> MiniOS [style=invis]
+//PopOS -> Vanilla [style=invis]
+
+//Mandriva -> OpenMandriva [style=invis] 
+//Slax -> Mageia [style=invis]
+//Mandrake -> Mageia [style=invis]
+//Slackware -> Mandrake [style=invis]
+  
+//Gentoo -> Fedora [style=invis]
+//Clear -> Fedora [style=invis]
+//Linux -> Fedora [style=invis]
+OpenSUSE -> Arch [style=invis]
+
+// SLE -> Aeryon [style=invis]
+// SLE -> Puppy [style=invis]
+
+
+//ChromiumOS -> FydeOS
+
+}
