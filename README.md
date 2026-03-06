@@ -8,14 +8,14 @@ These are all the distros I know, plus a few I didn't but kept hearing about.  A
 
 ### Some Notes:
 - I have the categories as the most common use.  Some were hard to choose.
-- **Beginner Desktop** category is [according to DistroWatch](https://distrowatch.com/search.php?category=Beginners).
-- `Debian` is also commonly used as a **Desktop**.
-- `Ubuntu` and several other **Desktop** distros are also commonly used as **Servers** and other types.
-- `Bazzite` is also commonly used for **Desktop Gaming**.
-- `CachyOS`, `Nobara`, and `PikaOS` also have **Handheld Gaming Console** editions.
+- *Beginner Desktop* category is [according to DistroWatch](https://distrowatch.com/search.php?category=Beginners).
+- `Debian` is also commonly used as a *Desktop*.
+- `Ubuntu` and several other *Desktop* distros are also commonly used as *Servers* and other types.
+- `Bazzite` is also commonly used for *Desktop Gaming*.
+- `CachyOS`, `Nobara`, and `PikaOS` also have *Handheld Gaming Console* editions.
 - `CachyOS` kernel optimizations are inspired by `Clear Linux`.
 - `SteamOS` used to be based on `Debian` (not shown).
-- `CentOS` is now upstream of `RHEL` and is called `CentOS Stream`.
+- `CentOS` is upstream of `RHEL` and is called `CentOS Stream`.
 - `QubesOS` comes with `Fedora` or `Debian` based containers but runs a `Fedora` based hypervisor host.
 - `ChromiumOS` is based on `Gentoo` but can install a `Debian` subsystem.
 - `PostmarketOS` still uses some `Android` kernel drivers.
@@ -24,7 +24,7 @@ These are all the distros I know, plus a few I didn't but kept hearing about.  A
 ### To update/modify:
 (requires Graphviz)
 - edit `linuxdistros.dot`
-- for **`png`** run `dot -Tpng -O linuxdistros.dot`
-- for **`svg`** run `dot -Tsvg -O linuxdistros.dot`
+- for **png** run `dot -Tpng -O linuxdistros.dot`
+- for **svg** run `dot -Tsvg -O linuxdistros.dot`
 
 2026 codywohlers
